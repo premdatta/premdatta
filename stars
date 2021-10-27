@@ -1,0 +1,20 @@
+import turtle
+t = turtle.Turtle()
+t.speed(20)
+t.getscreen().bgcolor("black")
+t.penup()
+t.goto((-200 , 100))
+t.pendown()
+
+def ster(turtle,size):
+    if size < 10:
+        return
+    else:
+        t.begin_fill()
+        for i in range(5):
+            t.color("orange" , "blue")
+            t.forward(size)
+            ster(turtle,size/3)
+            t.left(216)
+ster(turtle, 300)
+turtle.done()
